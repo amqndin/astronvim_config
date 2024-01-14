@@ -1,14 +1,8 @@
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
+  -- themes
+  { "arturgoms/moonbow.nvim", lazy = false },
+  { "catppuccin/nvim", lazy = false },
+  -- plugins
   {
     "CrystalAlpha358/vim-mcfunction",
     event = "BufRead",
@@ -41,4 +35,18 @@ return {
       line_number_text    = "Line %s out of %s",        -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
     },
   }
+
+
+  -- SYNTAX FOR ADDING / CUSTOMIZING PLUGINS:
+  --
+  -- You can also add new plugins here as well:
+  -- Add plugins, the lazy syntax
+  -- "andweeb/presence.nvim",
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("lsp_signature").setup()
+  --   end,
+  -- },
 }
