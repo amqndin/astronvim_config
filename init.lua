@@ -58,6 +58,8 @@ return {
     -- change font in a gui app for nvim 
     vim.o.guifont = "JetBrainsMono Nerd Font:h14"
 
+    vim.opt.mouse = ""
+
     -- Set up custom filetypes
     vim.filetype.add {
       extension = {
