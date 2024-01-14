@@ -85,12 +85,11 @@ return {
       extension = {
         jmc = "javascript",
       },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
     }
+
+    -- Disable LSP for .jmc files
+    vim.cmd([[
+        autocmd BufRead,BufNewFile *.jmc lua vim.lsp.stop_client(vim.lsp.get_active_clients())
+    ]])
   end,
 }
