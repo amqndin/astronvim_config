@@ -4,7 +4,7 @@ return {
     opts = function(_, opts)
       local status = require("astronvim.utils.status")
       opts.statusline = { -- statusline
-        hl = { fg = "fg", bg = "bg" },
+        hl = { fg = "fg", bg = "bg"},
         status.component.mode { mode_text = { padding = { left = 1, right = 1 } } }, -- add the mode text
         status.component.git_branch(),
         status.component.file_info { filetype = {}, filename = false, file_modified = false },
@@ -31,17 +31,17 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+
+[[                                       __               ]],
+[[                                      |  \              ]],
+[[  _______   ______   ______  __     __ \▓▓______ ____   ]],
+[[ |       \ /      \ /      \|  \   /  \  \      \    \  ]],
+[[ | ▓▓▓▓▓▓▓\  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\\▓▓\ /  ▓▓ ▓▓ ▓▓▓▓▓▓\▓▓▓▓\ ]],
+[[ | ▓▓  | ▓▓ ▓▓    ▓▓ ▓▓  | ▓▓ \▓▓\  ▓▓| ▓▓ ▓▓ | ▓▓ | ▓▓ ]],
+[[ | ▓▓  | ▓▓ ▓▓▓▓▓▓▓▓ ▓▓__/ ▓▓  \▓▓ ▓▓ | ▓▓ ▓▓ | ▓▓ | ▓▓ ]],
+[[ | ▓▓  | ▓▓\▓▓     \\▓▓    ▓▓   \▓▓▓  | ▓▓ ▓▓ | ▓▓ | ▓▓ ]],
+[[  \▓▓   \▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓     \▓    \▓▓\▓▓  \▓▓  \▓▓ ]],
+
       }
       return opts
     end,
@@ -56,7 +56,7 @@ return {
   --     require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
   --     -- add more custom luasnip configuration such as filetype extend or custom snippets
   --     local luasnip = require "luasnip"
-  --     luasnip.filetype_extend("javascript", { "javascriptreact" })
+  --     luasnip.filetype_extend("javascript", { "javascriptreact[[ })
   --   end,
   -- },
   -- {
@@ -69,7 +69,7 @@ return {
   --     local cond = require "nvim-autopairs.conds"
   --     npairs.add_rules(
   --       {
-  --         Rule("$", "$", { "tex", "latex" })
+  --         Rule("$", "$", { "tex", "latex[[ })
   --           -- don't add a pair if the next character is %
   --           :with_pair(cond.not_after_regex "%%")
   --           -- don't add a pair if  the previous character is xxx
@@ -96,8 +96,8 @@ return {
   --     -- Add bindings which show up as group name
   --     local wk = require "which-key"
   --     wk.register({
-  --       b = { name = "Buffer" },
-  --     }, { mode = "n", prefix = "<leader>" })
+  --       b = { name = "Buffer[[ },
+  --     }, { mode = "n", prefix = "<leader>[[ })
   --   end,
   -- },
 }
