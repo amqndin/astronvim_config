@@ -1,7 +1,12 @@
 return {
   -- themes
-  { "arturgoms/moonbow.nvim", lazy = false },
+  {
+    "arturgoms/moonbow.nvim",
+    lazy = false
+  },
   { "catppuccin/nvim", lazy = false },
+  { "folke/tokyonight.nvim", lazy = false },
+  { "rebelot/kanagawa.nvim", lazy = false },
   -- plugins
   {
     "CrystalAlpha358/vim-mcfunction",
