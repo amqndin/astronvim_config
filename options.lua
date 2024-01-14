@@ -7,7 +7,7 @@ return {
     spell = false, -- sets vim.opt.spell
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
-    mouse = "",
+    mouse = "", -- disable mouse completely
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -20,7 +20,7 @@ return {
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
   },
   o = {
-    guifont = "JetBrainsMono Nerd Font:h14"
+    guifont = "JetBrainsMono Nerd Font:h14", -- change gui app font
   },
 }
 -- If you need more control, you can use the function()...end notation

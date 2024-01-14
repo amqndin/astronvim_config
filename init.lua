@@ -55,11 +55,6 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- change font in a gui app for nvim 
-    vim.o.guifont = "JetBrainsMono Nerd Font:h14"
-
-    vim.opt.mouse = ""
-
     -- Set up custom filetypes
     vim.filetype.add {
       extension = {
