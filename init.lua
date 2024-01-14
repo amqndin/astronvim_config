@@ -12,7 +12,7 @@ return {
     auto_quit = false, -- automatically quit the current session after a successful update
     remotes = { -- easily add new remotes to track
       --   ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url
-      --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
+    --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
     },
   },
@@ -73,23 +73,15 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- vim.opt.tabstop = 4
-    -- vim.opt.softtabstop = 4
-    -- vim.opt.shiftwidth = 4
-    -- vim.opt.expandtab = true
-
+    -- change font in a gui app for nvim 
     vim.o.guifont = "JetBrainsMono Nerd Font:h14"
 
     -- Set up custom filetypes
     vim.filetype.add {
       extension = {
-        jmc = "javascript",
+        jmc = "jmc",
       },
     }
 
-    -- Disable LSP for .jmc files
-    vim.cmd([[
-        autocmd BufRead,BufNewFile *.jmc lua vim.lsp.stop_client(vim.lsp.get_active_clients())
-    ]])
   end,
 }
