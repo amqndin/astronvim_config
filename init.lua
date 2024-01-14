@@ -55,12 +55,14 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    -- Set up custom filetypes
+    -- set up custom filetypes
     vim.filetype.add {
       extension = {
         jmc = "jmc",
       },
     }
+
+    -- set up autocommands
 
   end,
 }
