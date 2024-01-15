@@ -6,14 +6,8 @@ return {
       -- "lua"
     })
 
-    -- Set up custom filetypes
-    vim.filetype.add {
-      extension = {
-        jmc = "jmc",
-      },
-    }
-
     vim.treesitter.language.register('javascript', 'jmc')
+    vim.treesitter.language.register('python', 'bolt')
 
   end,
 }

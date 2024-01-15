@@ -59,6 +59,7 @@ return {
     vim.filetype.add {
       extension = {
         jmc = "jmc",
+        bolt = "bolt",
       },
     }
 
