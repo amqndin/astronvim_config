@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "catppuccin",
+  colorscheme = "astrodark",
 
   diagnostics = {
     virtual_text = true,

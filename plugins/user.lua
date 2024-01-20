@@ -1,14 +1,15 @@
 return {
   -- themes
-  {
-    "arturgoms/moonbow.nvim",
-    lazy = false
-  },
+  { "arturgoms/moonbow.nvim", lazy = false },
   { "catppuccin/nvim", lazy = false },
   { "folke/tokyonight.nvim", lazy = false },
   { "rebelot/kanagawa.nvim", lazy = false },
   -- plugins
   "AstroNvim/astrocommunity",
+  {
+    "ThePrimeagen/vim-be-good",
+    event = "VeryLazy"
+  },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -39,18 +40,18 @@ return {
   {
     "CrystalAlpha358/vim-mcfunction",
     event = "BufRead",
-    ft = {"mcfunction"},
+    ft = {"mcfunction", "bolt"},
     lazy = true,
   },
-  {
-    "andweeb/presence.nvim",
-    lazy = false,
-    opts = {
-      -- General options
-      auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-      neovim_image_text   = "hands down best editor", -- Text displayed when hovered over the Neovim image
-      enable_line_number  = false,                      -- Displays the current line number instead of the current project
-      show_time           = false,                       -- Show the timer
-    },
-  },
+  -- {
+  --   "andweeb/presence.nvim",
+  --   lazy = false,
+  --   opts = {
+  --     -- General options
+  --     auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
+  --     neovim_image_text   = "hands down best editor", -- Text displayed when hovered over the Neovim image
+  --     enable_line_number  = false,                      -- Displays the current line number instead of the current project
+  --     show_time           = false,                       -- Show the timer
+  --   },
+  -- },
 }
