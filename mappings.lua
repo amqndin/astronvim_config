@@ -11,7 +11,7 @@ return function(maps)
     maps.n["<leader>e"] = { "<cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>"}
     maps.n["<leader>o"] = { "<cmd>call VSCodeNotify('workbench.view.explorer')<CR>"}
   else -- neovim only 
-    maps.x["p"] = { "\"_dP", desc = "Paste text"}
+    maps.x["<leader>p"] = { "\"_dP", desc = "Paste text without yanking selection"}
     maps.t["<esc>"] = { "<c-\\><c-n>", desc = "Enter Normal Mode" }
     maps.i["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.c["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
