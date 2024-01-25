@@ -12,7 +12,7 @@ return function(maps)
     maps.n["<leader>o"] = { "<cmd>call VSCodeNotify('workbench.view.explorer')<CR>"}
   else -- neovim only 
     maps.x["<leader>p"] = { "\"_dP", desc = "Paste text without yanking selection"}
-    maps.t["<esc>"] = { "<c-\\><c-n>", desc = "Enter Normal Mode" }
+    maps.t["<esc><esc>"] = { "<c-\\><c-n>", desc = "Enter Normal Mode" }
     maps.i["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.c["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
   end
