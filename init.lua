@@ -19,6 +19,7 @@ return {
 
   -- Set colorscheme to use
   colorscheme = "catppuccin",
+  term_colors = true,
 
   diagnostics = {
     virtual_text = true,

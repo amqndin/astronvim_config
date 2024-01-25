@@ -32,16 +32,6 @@ return {
       -- customize the dashboard header
       opts.section.header.val = {
 
--- [[                                       __               ]],
--- [[                                      |  \              ]],
--- [[  _______   ______   ______  __     __ \▓▓______ ____   ]],
--- [[ |       \ /      \ /      \|  \   /  \  \      \    \  ]],
--- [[ | ▓▓▓▓▓▓▓\  ▓▓▓▓▓▓\  ▓▓▓▓▓▓\\▓▓\ /  ▓▓ ▓▓ ▓▓▓▓▓▓\▓▓▓▓\ ]],
--- [[ | ▓▓  | ▓▓ ▓▓    ▓▓ ▓▓  | ▓▓ \▓▓\  ▓▓| ▓▓ ▓▓ | ▓▓ | ▓▓ ]],
--- [[ | ▓▓  | ▓▓ ▓▓▓▓▓▓▓▓ ▓▓__/ ▓▓  \▓▓ ▓▓ | ▓▓ ▓▓ | ▓▓ | ▓▓ ]],
--- [[ | ▓▓  | ▓▓\▓▓     \\▓▓    ▓▓   \▓▓▓  | ▓▓ ▓▓ | ▓▓ | ▓▓ ]],
--- [[  \▓▓   \▓▓ \▓▓▓▓▓▓▓ \▓▓▓▓▓▓     \▓    \▓▓\▓▓  \▓▓  \▓▓ ]],
-
 	[[                               __                ]],
 	[[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
 	[[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
@@ -51,6 +41,19 @@ return {
       }
       return opts
     end,
+  },
+  {
+    "nvim-tree/nvim-web-devicons",
+    opts = {
+      override = {
+        jmc = {
+          icon = "󰍳",
+          color = "#a6e3a1",
+          deviconscterm_color = "65",
+          name = "jmc",
+        }
+      }
+    }
   },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },

@@ -1,15 +1,20 @@
 return {
   -- themes
   { "arturgoms/moonbow.nvim", lazy = false },
-  { "catppuccin/nvim", lazy = false },
+  {
+    "catppuccin/nvim",
+    config = function()
+      require("catppuccin").setup({
+        term_colors = true,
+      })
+    end,
+    lazy = false,
+  },
   { "folke/tokyonight.nvim", lazy = false },
   { "rebelot/kanagawa.nvim", lazy = false },
   -- plugins
   "AstroNvim/astrocommunity",
-  {
-    "ThePrimeagen/vim-be-good",
-    event = "VeryLazy"
-  },
+  { "ThePrimeagen/vim-be-good", event = "VeryLazy" },
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
