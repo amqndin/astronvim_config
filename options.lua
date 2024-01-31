@@ -21,7 +21,7 @@ return {
     resession_enabled = false, -- enable experimental resession.nvim session management (will be default in AstroNvim v4)
   },
   o = {
-    guifont = "JetBrainsMono Nerd Font:h14",
+    guifont = "JetBrainsMono Nerd Font:h12",
     -- guifont = "FiraCode Nerd Font:h14",
   },
 }
