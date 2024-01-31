@@ -61,6 +61,8 @@ return {
       extension = {
         jmc = "jmc",
         bolt = "bolt",
+        mcmeta = "json",
+        mc = "mc"
       },
     }
 

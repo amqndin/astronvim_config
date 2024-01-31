@@ -8,6 +8,7 @@ return {
 
     vim.treesitter.language.register('javascript', 'jmc')
     vim.treesitter.language.register('python', 'bolt')
+    vim.treesitter.language.register('javascript', 'mc')
 
   end,
 }
