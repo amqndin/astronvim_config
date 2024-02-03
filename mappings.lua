@@ -16,18 +16,18 @@ return function(maps)
     maps.i["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.c["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.n["<leader>fs"] = { "<cmd>SessionManager! load_session<cr>", desc = "Find sessions" }
-    maps.i["<A-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
-    maps.v["<A-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
-    maps.t["<A-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
+    maps.i["<a-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
+    maps.v["<a-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
+    maps.t["<a-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
   end
   ------- Global keybindings both vscode and neovim
   -- Move Lines
-  maps.n["<M-j>"] = { "<cmd>m .+1<cr>==", desc = "Move down" }
-  maps.n["<M-k>"] = { "<cmd>m .-2<cr>==", desc = "Move up" }
-  maps.i["<M-j>"] = { "<esc><cmd>m .+1<cr>==gi", desc = "Move down" }
-  maps.i["<M-k>"] = { "<esc><cmd>m .-2<cr>==gi", desc = "Move up" }
-  maps.x["<M-j>"] = { ":m '>+1<cr>gv=gv", desc = "Move down" }
-  maps.x["<M-k>"] = { ":m '<-2<cr>gv=gv", desc = "Move up" }
+  maps.n["<a-j>"] = { "<cmd>m .+1<cr>==", desc = "Move down" }
+  maps.n["<a-k>"] = { "<cmd>m .-2<cr>==", desc = "Move up" }
+  maps.i["<a-j>"] = { "<esc><cmd>m .+1<cr>==gi", desc = "Move down" }
+  maps.i["<a-k>"] = { "<esc><cmd>m .-2<cr>==gi", desc = "Move up" }
+  maps.x["<a-j>"] = { ":m '>+1<cr>gv=gv", desc = "Move down" }
+  maps.x["<a-k>"] = { ":m '<-2<cr>gv=gv", desc = "Move up" }
 
   return maps
 end
