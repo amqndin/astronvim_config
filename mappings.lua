@@ -16,9 +16,6 @@ return function(maps)
     maps.i["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.c["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.n["<leader>fs"] = { "<cmd>SessionManager! load_session<cr>", desc = "Find sessions" }
-    maps.i["<a-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
-    maps.v["<a-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
-    maps.t["<a-l>"] = { "<c-\\><c-n>", desc = "Enter normal mode" }
   end
   ------- Global keybindings both vscode and neovim
   -- Move Lines
