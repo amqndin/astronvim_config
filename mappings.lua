@@ -16,6 +16,14 @@ return function(maps)
     maps.i["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.c["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.n["<leader>fs"] = { "<cmd>SessionManager! load_session<cr>", desc = "Find sessions" }
+    -- run files
+    maps.n["<leader>r"] = { desc = "Run this file as ..."}
+    maps.n["<leader>rp"] = { ":!python \"%\"<esc>", desc = "Python"}
+    maps.n["<leader>rn"] = { ":!node \"%\"<esc>", desc = "Nodejs"}
+    maps.n["<leader>d"] = { desc = "Run this folder as ..."}
+    maps.n["<leader>db"] = { ":!beet<esc>", desc = "Beet"}
+    maps.n["<leader>dp"] = { ":!python .<esc>", desc = "Python"}
+    maps.n["<leader>dn"] = { ":!node .<esc>", desc = "Nodejs"}
   end
   ------- Global keybindings both vscode and neovim
   -- Move Lines

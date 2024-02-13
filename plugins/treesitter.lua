@@ -6,7 +6,7 @@ return {
       -- "lua"
     })
 
-    vim.treesitter.language.register('javascript', 'jmc')
+    vim.treesitter.language.register('java', 'jmc')
     vim.treesitter.language.register('python', 'bolt')
     vim.treesitter.language.register('javascript', 'mc')
 
