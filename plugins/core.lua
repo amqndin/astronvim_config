@@ -1,5 +1,9 @@
 return {
-    {
+  { 
+    "nvim-telescope/telescope-fzf-native.nvim",
+    enabled = false,
+  },
+  {
     "rebelot/heirline.nvim",
     opts = function(_, opts)
       local status = require("astronvim.utils.status")
