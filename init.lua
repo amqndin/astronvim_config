@@ -62,11 +62,10 @@ return {
         jmc = "jmc",
         bolt = "bolt",
         mcmeta = "json",
-        mc = "mc"
+        mc = "mc",
       },
     }
 
     -- set up autocommands
-
   end,
 }

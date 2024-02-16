@@ -22,7 +22,6 @@ return {
   },
   o = {
     guifont = "JetBrainsMono Nerd Font:h12",
-    -- guifont = "FiraCode Nerd Font:h14",
   },
 }
 -- If you need more control, you can use the function()...end notation

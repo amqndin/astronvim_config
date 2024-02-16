@@ -1,6 +1,6 @@
 return {
   -- themes
-  { "arturgoms/moonbow.nvim", lazy = false },
+  { "arturgoms/moonbow.nvim", lazy = true },
   {
     "catppuccin/nvim",
     config = function()
@@ -8,10 +8,10 @@ return {
         term_colors = true,
       })
     end,
-    lazy = false,
+    lazy = true,
   },
-  { "folke/tokyonight.nvim", lazy = false },
-  { "rebelot/kanagawa.nvim", lazy = false },
+  { "folke/tokyonight.nvim", lazy = true },
+  { "rebelot/kanagawa.nvim", lazy = true },
   -- 
   -- plugins
   "AstroNvim/astrocommunity",
@@ -87,9 +87,9 @@ return {
   --   opts = {
   --     -- General options
   --     auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-  --     neovim_image_text   = "hands down best editor", -- Text displayed when hovered over the Neovim image
+  --     neovim_image_text   = "hands down best editor",   -- Text displayed when hovered over the Neovim image
   --     enable_line_number  = false,                      -- Displays the current line number instead of the current project
-  --     show_time           = false,                       -- Show the timer
+  --     show_time           = false,                      -- Show the timer
   --   },
   -- },
 }
