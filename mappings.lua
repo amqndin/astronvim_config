@@ -5,16 +5,25 @@
 -- automatically pick-up stored data by this setting.)
 
 return function(maps)
+  function vscode_map(mode, keybind, command)
+    maps[mode][keybind] = { "<cmd>call VSCodeNotify('".. command .."')<CR>"}
+    return maps[mode][keybind]
+  end
+  
   if vim.g.vscode then -- vscode only
-    maps.n["<leader>fw"] = { "<Cmd>call VSCodeNotify('workbench.action.findInFiles')<CR>"}
-    maps.n["<leader>w"] = { "<cmd>call VSCodeNotify('workbench.action.files.saveFiles')<CR>"}
-    maps.n["<leader>e"] = { "<cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>"}
-    maps.n["<leader>o"] = { "<cmd>call VSCodeNotify('workbench.view.explorer')<CR>"}
+    vscode_map("n", "<leader>fw", "workbench.action.findInFiles")
+    vscode_map("n", "<leader>q", "workbench.action.closeWindow")
+    vscode_map("n", "<leader>w", "workbench.action.files.saveFiles")
+    vscode_map("n", "<leader>e", "workbench.action.toggleSidebarVisibility")
+    vscode_map("n", "<leader>o", "workbench.view.explorer")
+    vscode_map("n", "<leader>ff", "workbench.action.quickOpen")
+    vscode_map("n", "<leader>c", "workbench.action.closeActiveEditor")
+    vscode_map("i", "jk", "vscode-neovim.escape")
   else -- neovim only 
     maps.x["<leader>p"] = { "\"_dP", desc = "Paste text without yanking selection"}
     maps.t["<esc><esc>"] = { "<c-\\><c-n>", desc = "Enter Normal Mode" }
+    maps.t["jk"] = { "<c-\\><c-n>", desc = "Enter Normal Mode" }
     maps.i["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
-    maps.c["<C-BS>"] = { "<c-w>", desc = "Delete previous word" }
     maps.n["<leader>fs"] = { "<cmd>SessionManager! load_session<cr>", desc = "Find sessions" }
     -- run files
     maps.n["<leader>r"] = { desc = "Run this file as ..."}

@@ -1,7 +1,7 @@
 if not vim.g.vscode then return {} end
 
 local enabled = {
-  "lazy.nvim",
+  
 }
 
 local Config = require "lazy.core.config"
