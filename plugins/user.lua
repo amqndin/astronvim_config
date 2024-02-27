@@ -6,6 +6,7 @@ return {
     config = function()
       require("catppuccin").setup({
         term_colors = true,
+        integrations = { neotree= true },
       })
     end,
     lazy = true,
