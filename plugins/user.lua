@@ -1,6 +1,5 @@
 return {
   -- themes
-  { "arturgoms/moonbow.nvim", lazy = true },
   {
     "catppuccin/nvim",
     config = function()
@@ -11,28 +10,21 @@ return {
     end,
     lazy = true,
   },
-  { "folke/tokyonight.nvim", lazy = true },
-  { "rebelot/kanagawa.nvim", lazy = true },
   -- 
   -- plugins
-  "AstroNvim/astrocommunity",
-  { "ThePrimeagen/vim-be-good", event = "VeryLazy" },
   {
-    "folke/trouble.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    event = "VeryLazy",
-    opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-    },
+    "phaazon/hop.nvim",
+    version = "v2",
+    lazy = true,
+    config = function()
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
   },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-    ---@diagnostic disable-next-line: missing-fields
       require("nvim-surround").setup({ --[[ config here]] })
     end
   },
