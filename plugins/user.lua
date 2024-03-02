@@ -1,14 +1,37 @@
 return {
   -- themes
+  { "AstroNvim/astrotheme", lazy = false },
   {
     "catppuccin/nvim",
+    priority = 1000,
     config = function()
       require("catppuccin").setup({
         term_colors = true,
-        integrations = { neotree= true },
+        dim_inactive = {
+          enabled = true,
+        },
+        integrations = {
+          neotree = true,
+          aerial = true,
+          harpoon = true,
+          hop = true,
+          leap = true,
+          bufferline = true,
+          notify = true,
+          mason = true,
+          window_picker = true,
+          which_key = true,
+          indent_blankline = {
+            enabled = true,
+            scope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text
+            colored_indent_levels = true,
+          },
+          telescope = { enabled = true },
+          noice = true,
+          lsp_trouble = true,
+        },
       })
     end,
-    lazy = true,
   },
   -- plugins
   {
@@ -16,7 +39,28 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-      require("nvim-surround").setup({ --[[ config here]] })
+      -- require("nvim-surround").setup({
+        -- config here
+      -- })
+    end
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    config = function()
+      require'treesitter-context'.setup{
+        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+        min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
+        line_numbers = true,
+        multiline_threshold = 20, -- Maximum number of lines to show for a single context
+        trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
+        mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+        -- Separator between context and content. Should be a single character string, like '-'.
+        -- When separator is set, the context will only show up when there are at least 2 lines above cursorline.
+        separator = nil,
+        zindex = 20, -- The Z-index of the context window
+        on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
+      }
     end
   },
   {
@@ -65,22 +109,22 @@ return {
       })
     end
   },
-  -- {
-  --   "phaazon/hop.nvim",
-  --   version = "v2",
-  --   lazy = false,
-  --   config = function()
-  --       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-  --   end
-  -- },
   {
-    "ggandor/leap.nvim",
+    "phaazon/hop.nvim",
+    version = "v2",
     lazy = false,
     config = function()
-      require('leap').create_default_mappings()
-      require('leap').opts.special_keys.prev_target = '<bs>'
-      require('leap').opts.special_keys.prev_group = '<bs>'
-      require('leap.user').set_repeat_keys('<cr>', '<bs>')
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
-  }
+  },
+  -- {
+  --   "ggandor/leap.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require('leap').create_default_mappings()
+  --     require('leap').opts.special_keys.prev_target = '<bs>'
+  --     require('leap').opts.special_keys.prev_group = '<bs>'
+  --     require('leap.user').set_repeat_keys('<cr>', '<bs>')
+  --   end
+  -- }
 }

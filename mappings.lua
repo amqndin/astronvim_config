@@ -33,8 +33,9 @@ return function(maps)
     maps.n["<leader>db"] = { "<cmd>!beet<CR>", desc = "Beet"}
     maps.n["<leader>dp"] = { "<cmd>!python .<CR>", desc = "Python"}
     maps.n["<leader>dn"] = { "<cmd>!node .<CR>", desc = "Nodejs"}
-    -- hop
-    maps.n["f"] = { "<cmd>HopChar1<CR>", desc = "Hop to char" }
+
+    maps.n["s"] = { "<cmd>HopChar1<CR>", desc = "Hop to char" }
+    maps.n["S"] = { "<cmd>HopLine<CR>", desc = "Hop to line" }
   end
   ------- Global keybindings both vscode and neovim
   -- Move Lines
@@ -45,5 +46,6 @@ return function(maps)
   maps.x["<a-j>"] = { ":m '>+1<cr>gv=gv", desc = "Move down" }
   maps.x["<a-k>"] = { ":m '<-2<cr>gv=gv", desc = "Move up" }
 
+  maps.n[";"] = {":"}
   return maps
 end
