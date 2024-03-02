@@ -27,12 +27,14 @@ return function(maps)
     maps.n["<leader>fs"] = { "<cmd>SessionManager! load_session<cr>", desc = "Find sessions" }
     -- run files
     maps.n["<leader>r"] = { desc = "Run this file as ..."}
-    maps.n["<leader>rp"] = { ":!python \"%\"<esc>", desc = "Python"}
-    maps.n["<leader>rn"] = { ":!node \"%\"<esc>", desc = "Nodejs"}
+    maps.n["<leader>rp"] = { "<cmd>!python \"%\"<CR>", desc = "Python"}
+    maps.n["<leader>rn"] = { "<cmd>!node \"%\"<CR>", desc = "Nodejs"}
     maps.n["<leader>d"] = { desc = "Run this folder as ..."}
-    maps.n["<leader>db"] = { ":!beet<esc>", desc = "Beet"}
-    maps.n["<leader>dp"] = { ":!python .<esc>", desc = "Python"}
-    maps.n["<leader>dn"] = { ":!node .<esc>", desc = "Nodejs"}
+    maps.n["<leader>db"] = { "<cmd>!beet<CR>", desc = "Beet"}
+    maps.n["<leader>dp"] = { "<cmd>!python .<CR>", desc = "Python"}
+    maps.n["<leader>dn"] = { "<cmd>!node .<CR>", desc = "Nodejs"}
+    -- hop
+    maps.n["f"] = { "<cmd>HopChar1<CR>", desc = "Hop to char" }
   end
   ------- Global keybindings both vscode and neovim
   -- Move Lines

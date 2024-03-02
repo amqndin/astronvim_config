@@ -10,16 +10,7 @@ return {
     end,
     lazy = true,
   },
-  -- 
   -- plugins
-  {
-    "phaazon/hop.nvim",
-    version = "v2",
-    lazy = true,
-    config = function()
-        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    end
-  },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -73,16 +64,23 @@ return {
         },
       })
     end
-  }
+  },
   -- {
-  --   "andweeb/presence.nvim",
+  --   "phaazon/hop.nvim",
+  --   version = "v2",
   --   lazy = false,
-  --   opts = {
-  --     -- General options
-  --     auto_update         = true,                       -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
-  --     neovim_image_text   = "hands down best editor",   -- Text displayed when hovered over the Neovim image
-  --     enable_line_number  = false,                      -- Displays the current line number instead of the current project
-  --     show_time           = false,                      -- Show the timer
-  --   },
+  --   config = function()
+  --       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  --   end
   -- },
+  {
+    "ggandor/leap.nvim",
+    lazy = false,
+    config = function()
+      require('leap').create_default_mappings()
+      require('leap').opts.special_keys.prev_target = '<bs>'
+      require('leap').opts.special_keys.prev_group = '<bs>'
+      require('leap.user').set_repeat_keys('<cr>', '<bs>')
+    end
+  }
 }
