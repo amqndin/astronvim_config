@@ -5,11 +5,10 @@
 -- automatically pick-up stored data by this setting.)
 
 return function(maps)
-  function vscode_map(mode, keybind, command)
+  local function vscode_map(mode, keybind, command)
     maps[mode][keybind] = { "<cmd>call VSCodeNotify('".. command .."')<CR>"}
     return maps[mode][keybind]
   end
-  
   if vim.g.vscode then -- vscode only
     vscode_map("n", "<leader>fw", "workbench.action.findInFiles")
     vscode_map("n", "<leader>q", "workbench.action.closeWindow")
@@ -45,7 +44,5 @@ return function(maps)
   maps.i["<a-k>"] = { "<esc><cmd>m .-2<cr>==gi", desc = "Move up" }
   maps.x["<a-j>"] = { ":m '>+1<cr>gv=gv", desc = "Move down" }
   maps.x["<a-k>"] = { ":m '<-2<cr>gv=gv", desc = "Move up" }
-
-  maps.n[";"] = {":"}
   return maps
 end

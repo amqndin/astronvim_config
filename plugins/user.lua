@@ -1,4 +1,5 @@
 return {
+  { "ThePrimeagen/vim-be-good" },
   {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -26,7 +27,8 @@ return {
         zindex = 20, -- The Z-index of the context window
         on_attach = nil, -- (fun(buf: integer): boolean) return false to disable attaching
       }
-    end
+    end,
+    lazy = true
   },
   {
     "CrystalAlpha358/vim-mcfunction",
@@ -81,6 +83,24 @@ return {
     config = function()
         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
+  },
+  {
+    "Exafunction/codeium.vim",
+    config = function()
+      vim.g.codeium_disable_bindings = 1
+      vim.keymap.set('i', '<A-y>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+      vim.keymap.set('i', '<tab>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+      vim.keymap.set('i', '<A-;>', function () return vim.fn['codeium#Complete']() end, { expr = true, silent = true })
+      vim.keymap.set('i', '<A-]>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+      vim.keymap.set('i', '<A-[>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+      vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+      vim.keymap.set('n', '<A-h>', function() return vim.fn['codeium#Chat']() end, { expr = true, silent = true })
+    end,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    event = "BufEnter"
   },
   -- {
   --   "ggandor/leap.nvim",

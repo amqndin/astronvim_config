@@ -34,9 +34,7 @@ return {
       "spyglassmc_language_server"
     },
     config = { -- config language servers 
-      spyglassmc_language_server = {
-        root_dir = function() return vim.loop.cwd() end
-      }
+      spyglassmc_language_server = { root_dir = function() return vim.loop.cwd() end }
     }
   },
 
@@ -58,6 +56,7 @@ return {
     -- set up custom filetypes
     vim.filetype.add {
       extension = {
+        mcfunction = "mcfunction",
         jmc = "jmc",
         bolt = "bolt",
         mcmeta = "json",
@@ -65,6 +64,16 @@ return {
       },
     }
 
-    -- set up autocommands
-  end,
+
+    vim.g.codeium_workspace_root_hints = {
+      '.bzr',
+      '.git',
+      '.hg',
+      '.svn',
+      '_FOSSIL_',
+      'package.json',
+      'beet.yaml',
+      'pack.mcmeta',
+    }
+end
 }

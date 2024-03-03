@@ -1,5 +1,35 @@
+local minecraft_icon = {
+  color = "#a6e3a1",
+  icon = "󰍳",
+  deviconscterm_color = "65",
+  name = "minecraft",
+}
 return {
-  { 
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      local ft = require("Comment.ft")
+
+      -- add support for other file types
+      ft.set("mcfunction", "#%s")
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      local cmp = require "cmp"
+      opts.sources = cmp.config.sources {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "path" },
+        { name = "codeium" },
+        { name = "nvim_lsp_signature_help" },
+      }
+      return opts
+    end,
+  },
+  {
     "nvim-telescope/telescope-fzf-native.nvim",
     enabled = false,
   },
@@ -46,14 +76,10 @@ return {
   {
     "nvim-tree/nvim-web-devicons",
     opts = {
-      override = {
-        jmc = {
-          icon = "󰍳",
-          color = "#a6e3a1",
-          deviconscterm_color = "65",
-          name = "jmc",
-        }
-      }
+      override_by_extension = {
+        jmc = minecraft_icon,
+        mcfunction = minecraft_icon
+      };
     }
   },
   -- You can disable default plugins as follows:
