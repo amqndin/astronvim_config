@@ -79,7 +79,7 @@ return {
   {
     "phaazon/hop.nvim",
     version = "v2",
-    lazy = false,
+    event = "BufEnter",
     config = function()
         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
